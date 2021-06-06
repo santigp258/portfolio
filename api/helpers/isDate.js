@@ -1,4 +1,4 @@
-const moment = require("moment");
+const moment = require('moment');
 
 const isDate = (value, rest) => {
   //if no exist value, date is incorrect

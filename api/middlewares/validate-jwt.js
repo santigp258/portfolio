@@ -1,13 +1,13 @@
-const { response } = require("express");
-const jwt = require("jsonwebtoken");
+const { response } = require('express');
+const jwt = require('jsonwebtoken');
 
 const validateJWT = (req, res = response, next) => {
-  const token = req.header("x-token");
+  const token = req.header('x-token');
 
   if (!token) {
     return res.status(401).json({
       ok: false,
-      msg: "No exists token",
+      msg: 'No exists token'
     });
   }
 
@@ -20,12 +20,12 @@ const validateJWT = (req, res = response, next) => {
     console.log(error);
     return res.status(401).json({
       ok: false,
-      msg: "No valid Token",
+      msg: 'No valid Token'
     });
   }
   next();
 };
 
 module.exports = {
-  validateJWT,
+  validateJWT
 };

@@ -1,9 +1,7 @@
+import { AppRouter } from './routers/AppRouter';
+
 const App: React.FC = () => {
-  return (
-    <>
-      <h1>Hello world!</h1>
-    </>
-  );
+  return <AppRouter />;
 };
 
 export default App;

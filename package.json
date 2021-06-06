@@ -12,12 +12,12 @@
     "build": "npm run build --workspace=app",
     "dev:api": "npm run dev --workspace=api",
     "dev:app": "npm start --workspace=app",
-    "prettier": "prettier --write"
+    "prettier": "npx prettier --write ."
   },
   "keywords": [],
   "author": "Santiago Guerrero <santigp258@gmail.com>",
   "license": "ISC",
-  "dependencies": {
-    "react-typed": "^1.2.0"
+  "devDependencies": {
+    "prettier": "2.3.1"
   }
 }

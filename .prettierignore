@@ -1,5 +1,6 @@
 package.json
 node_modules
+app/node_modules
 docs
 dist
 CHANGELOG.md
