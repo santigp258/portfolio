@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <figure className="bg-gray-100 rounded-xl p-8">
+        <img
+          className="w-32 h-32 rounded-full mx-auto"
+          src="/sarah-dayan.jpg"
+          width={384}
+          height={512}
+        />
+        <div className="pt-6 text-center space-y-4">
+          <blockquote>
+            <p className="text-lg font-semibold">
+              “Tailwind CSS is the only framework that I've seen scale on large teams.
+              It’s easy to customize, adapts to any design, and the build size is tiny.”
+            </p>
+          </blockquote>
+          <figcaption className="font-medium">
+            <div className="text-cyan-600">Sarah Dayan</div>
+            <div className="text-gray-500">Staff Engineer, Algolia</div>
+          </figcaption>
+        </div>
+      </figure>
+    </>
   );
-}
+};
 
 export default App;
