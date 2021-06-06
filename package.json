@@ -16,5 +16,8 @@
   },
   "keywords": [],
   "author": "Santiago Guerrero <santigp258@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react-typed": "^1.2.0"
+  }
 }
