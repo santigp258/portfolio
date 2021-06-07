@@ -1,15 +1,16 @@
 import { Navbar } from '../ui/Navbar';
+import { Hero } from './Hero';
+import { Services } from './Services';
 /* import { Footer } from '../ui/Footer';
 import { Estimate } from './Estimate';
-import { Services } from './Services';
 import { Works } from './Works'; */
-import { Hero } from './Hero';
 
 export const MainScreen = () => {
   return (
     <>
       <Navbar />
       <Hero />
+      <Services />
     </>
   );
 };

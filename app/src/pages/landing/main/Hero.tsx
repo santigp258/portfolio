@@ -2,7 +2,7 @@ import Typed from 'react-typed';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="px-6 md:w-9/12 md:m-auto md:px-0 md:flex">
+    <section className="md:flex container">
       <div className="md:w-7/12 md:pr-24">
         <h3 className="text-2xl md:text-4xl mb-2">
           <Typed strings={['Hola, soy']} typeSpeed={50} showCursor={false} />

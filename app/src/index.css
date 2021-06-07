@@ -28,9 +28,17 @@
   .btn-blue {
     @apply bg-colorButton text-white;
   }
+  .container {
+    @apply md:w-9/12 md:m-auto md:px-0 px-6;
+  }
 }
 
 @font-face {
   font-family: Metropolis;
   src: url(./assets/metropolis.regular.otf);
+}
+
+html,
+body {
+  scroll-behavior: smooth !important;
 }

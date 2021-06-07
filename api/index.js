@@ -19,11 +19,11 @@ app.use('/api/works', require('./routes/works'));
 app.use('/api/mail', require('./routes/mail'));
 
 //public directory
-app.use(express.static('../portfolio/build'));
+app.use(express.static('../app/build'));
 
 //if path no exist
 app.get('**', (req, res) => {
-  res.sendFile(path.resolve('../portfolio/build/index.html'));
+  res.sendFile(path.resolve('../app/build/index.html'));
 });
 
 //TODO: auth, create, login, renew

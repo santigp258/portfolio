@@ -27,7 +27,7 @@ export const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="services__container">
+    <section id="services" className="container">
       <div className="services__help">
         <h4>Mis servicios</h4>
         <h4>Puedo ayudarte en esto</h4>
