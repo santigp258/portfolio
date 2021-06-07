@@ -12,7 +12,7 @@ export const Navbar: React.FC = () => {
   };
   return (
     <header>
-      <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6 md:w-9/12 md:m-auto">
+      <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6 md:w-9/12 md:m-auto md:px-0">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <span className="font-semibold text-xl tracking-tight text-primary cursor-pointer">
             {'<Santiago />'}
