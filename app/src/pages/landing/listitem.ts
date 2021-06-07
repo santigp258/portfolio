@@ -1,7 +1,6 @@
 export interface LisItemsI {
   title: string;
   href: string;
-  color?: string;
 }
 
 export const listItems: LisItemsI[] = [
@@ -9,5 +8,5 @@ export const listItems: LisItemsI[] = [
   { title: 'mi historia', href: 'history' },
   { title: 'servicios', href: 'services' },
   { title: 'trabajos', href: 'works' },
-  { title: 'contacto', href: 'contact', color: '' }
+  { title: 'contacto', href: 'contact' }
 ];
