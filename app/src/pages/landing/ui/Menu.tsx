@@ -1,24 +1,12 @@
-export const Menu: React.FC = () => {
+import { LisItemsI } from '../listitem';
+
+export const Menu: React.FC<LisItemsI> = ({ title, href, color = '' }) => {
   return (
-    <>
-      <a href="#home">
-        <li>Home</li>
-      </a>
-      <a href="#history">
-        {/* onClick={()=> setModalisOpen(true)} */}
-        <li>Mi historia</li>
-      </a>
-      <a href="#services">
-        <li>Servicios</li>
-      </a>
-      <a href="#works">
-        <li>Trabajos</li>
-      </a>
-      <a href="#contact">
-        <li>Contacto</li>
-      </a>
-      {/* MODAL */}
-      {/* <MyHistory modalIsOpen={modalIsOpen} closeModal={setModalisOpen} /> */}
-    </>
+    <a
+      href={`#${href}`}
+      className={`block mt-4 mr-5 md:inline-block md:mt-0 text-teal-200 hover:text-white capitalize ${color}`}
+    >
+      {title}
+    </a>
   );
 };

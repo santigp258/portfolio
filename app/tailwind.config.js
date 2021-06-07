@@ -234,6 +234,7 @@ module.exports = {
       DEFAULT: '1'
     },
     fontFamily: {
+      metropolis: ["Metropolis", "san-serif"],
       sans: [
         'ui-sans-serif',
         'system-ui',
@@ -781,7 +782,7 @@ module.exports = {
       '6/12': '50%',
       '7/12': '58.333333%',
       '8/12': '66.666667%',
-      '9/12': '75%',
+      '9/12': '80%',
       '10/12': '83.333333%',
       '11/12': '91.666667%',
       full: '100%',

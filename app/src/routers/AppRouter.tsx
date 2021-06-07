@@ -3,7 +3,7 @@ import MainScreen from '../pages/landing';
 export const AppRouter: React.FC = () => {
   return (
     <Router>
-      <div>
+      <div className="font-metropolis">
         <Switch>
           <Route component={MainScreen} exact path="/" />
           <Redirect to="/" />

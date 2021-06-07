@@ -1,3 +1,4 @@
+import { listItems } from '../listitem';
 import { Menu } from './Menu';
 
 export const Footer: React.FC = () => {
@@ -77,9 +78,11 @@ export const Footer: React.FC = () => {
 
         <div className="footer__right">
           <h5>Menu</h5>
-          <ul>
-            <Menu />
-          </ul>
+          <div>
+            {listItems.map(item => (
+              <Menu {...item} key={item.href}/>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
