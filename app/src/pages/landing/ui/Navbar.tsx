@@ -14,13 +14,15 @@ export const Navbar: React.FC = () => {
     <header>
       <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6 md:w-9/12 md:m-auto">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
-          <span className="font-semibold text-xl tracking-tight">{'<Santiago />'}</span>
+          <span className="font-semibold text-xl tracking-tight text-primary cursor-pointer">
+            {'<Santiago />'}
+          </span>
         </div>
         <div className="block md:hidden">
           <button
             id="boton"
             onClick={handleToggle}
-            className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+            className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400"
           >
             <svg
               className="fill-current h-3 w-3"
@@ -35,11 +37,11 @@ export const Navbar: React.FC = () => {
         <div
           ref={refMenu}
           id="menu"
-          className="w-full block flex-grow md:flex md:items-center md:w-auto"
+          className="w-full flex-grow md:flex md:items-center md:w-auto hidden"
         >
           <div className="text-base md:flex md:justify-end w-full">
             {listItems.map(item => (
-              <Menu {...item} key={item.href}/>
+              <Menu {...item} key={item.href} />
             ))}
           </div>
         </div>

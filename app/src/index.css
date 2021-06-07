@@ -1,3 +1,21 @@
+:root {
+  --background: #f6f9fe;
+  --navbar: hsl(0, 0%, 100%);
+  --black: rgba(17, 20, 22, 1);
+  --primary: rgba(38, 12, 188, 1);
+  --colorButton: rgba(248, 23, 67, 1);
+  --cards: rgba(67, 73, 223, 1);
+  --category: rgba(96, 101, 227, 1);
+  --tag: #e1ebfb;
+  --white: #ededed;
+  --service_title: #6799e0;
+  --tomato: tomato;
+  --worksLinks_title: #f9476a;
+  --works_background: #e5e5e5;
+  --estimate_secondary: rgba(103, 153, 224, 1);
+  --footer: #3a3a3a;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

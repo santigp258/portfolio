@@ -13,9 +13,11 @@ module.exports = {
       '2xl': '1536px'
     },
     colors: {
+      primary: 'var(--primary)',
+      background: 'var(--background)',
+      hoverlinks: 'var(--tomato)',
       transparent: 'transparent',
       current: 'currentColor',
-
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
@@ -234,7 +236,7 @@ module.exports = {
       DEFAULT: '1'
     },
     fontFamily: {
-      metropolis: ["Metropolis", "san-serif"],
+      metropolis: ['Metropolis', 'san-serif'],
       sans: [
         'ui-sans-serif',
         'system-ui',
@@ -837,6 +839,7 @@ module.exports = {
     backgroundBlendMode: ['responsive'],
     backgroundClip: ['responsive'],
     backgroundColor: [
+      'last',
       'responsive',
       'dark',
       'group-hover',
@@ -961,7 +964,15 @@ module.exports = {
     strokeWidth: ['responsive'],
     tableLayout: ['responsive'],
     textAlign: ['responsive'],
-    textColor: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
+    textColor: [
+      'responsive',
+      'dark',
+      'group-hover',
+      'focus-within',
+      'hover',
+      'focus',
+      'last'
+    ],
     textDecoration: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus'],
     textOpacity: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
     textOverflow: ['responsive'],

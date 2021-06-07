@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
           <h5>Menu</h5>
           <div>
             {listItems.map(item => (
-              <Menu {...item} key={item.href}/>
+              <Menu {...item} key={item.href} />
             ))}
           </div>
         </div>
