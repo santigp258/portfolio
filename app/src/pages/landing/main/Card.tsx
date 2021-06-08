@@ -10,7 +10,7 @@ export const Card: React.FC<CardI> = ({ title, icon, category, desc }) => {
         {category.map(({ title, _id }) => (
           <p
             key={_id}
-            className="capitalize mr-1 mb-1 w-2/5 flex justify-center align-middle bg-card-cat p-2 rounded-sm"
+            className="capitalize mr-1 mb-1 w-2/5 flex justify-center align-middle bg-card-cat p-2 rounded-sm items-center text-center"
           >
             {title}
           </p>
