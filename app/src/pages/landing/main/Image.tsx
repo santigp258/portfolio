@@ -15,5 +15,5 @@ export const Image: React.FC<ImageProps> = ({ url, changeImage }) => {
     };
   }, [changeImage]);
 
-  return <img src={`./${url.url}`} alt={url.alt} />;
+  return <img src={`./${url.url}`} alt={url.alt} className="img-slider" />;
 };

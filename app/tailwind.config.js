@@ -24,6 +24,7 @@ module.exports = {
       colorButton: 'var(--colorButton)',
       transparent: 'transparent',
       current: 'currentColor',
+      tag: 'var(--tag)',
       black: colors.black,
       white: 'var(--white)',
       gray: colors.coolGray,
@@ -847,6 +848,7 @@ module.exports = {
     backgroundBlendMode: ['responsive'],
     backgroundClip: ['responsive'],
     backgroundColor: [
+      'active',
       'last',
       'responsive',
       'dark',
@@ -869,7 +871,15 @@ module.exports = {
     backgroundSize: ['responsive'],
     blur: ['responsive'],
     borderCollapse: ['responsive'],
-    borderColor: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
+    borderColor: [
+      'responsive',
+      'dark',
+      'group-hover',
+      'focus-within',
+      'hover',
+      'focus',
+      'active'
+    ],
     borderOpacity: [
       'responsive',
       'dark',
