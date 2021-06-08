@@ -1,71 +1,9 @@
 import { Card } from './Card';
 import { CardI } from '../../../interface/api.response';
+import { useData } from '../../../global-stores/useData';
 
 export const Services: React.FC = () => {
-  //const { cards } = useSelector(state => state.portfolio);
-  const cards: CardI[] = [
-    {
-      _id: '6080c604b992ac2a602efcef',
-      title: 'React',
-      desc: 'Quise aprender React y un nuevo mundo se abrió camino, es una excelente librería para crear aplicaciones web, de hecho este portafolio está creado con este. También me he adentrado en el uso de hooks y Redux. ',
-      icon: 'fa-react',
-      category: [
-        {
-          _id: '6080c604b992ac2a602efcf0',
-          title: 'Jest'
-        },
-        {
-          _id: '6080c604b992ac2a602efcf1',
-          title: 'Hooks'
-        },
-        {
-          _id: '6080c604b992ac2a602efcf2',
-          title: 'Redux'
-        }
-      ]
-    },
-    {
-      _id: '2',
-      title: 'React',
-      desc: 'Quise aprender React y un nuevo mundo se abrió camino, es una excelente librería para crear aplicaciones web, de hecho este portafolio está creado con este. También me he adentrado en el uso de hooks y Redux. ',
-      icon: 'fa-react',
-      category: [
-        {
-          _id: '6080c604b992ac2a602efcf0',
-          title: 'Jest'
-        },
-        {
-          _id: '6080c604b992ac2a602efcf1',
-          title: 'Hooks'
-        },
-        {
-          _id: '6080c604b992ac2a602efcf2',
-          title: 'Redux'
-        }
-      ]
-    },
-    {
-      _id: '3',
-      title: 'React',
-      desc: 'Quise aprender React y un nuevo mundo se abrió camino, es una excelente librería para crear aplicaciones web, de hecho este portafolio está creado con este. También me he adentrado en el uso de hooks y Redux. ',
-      icon: 'fa-react',
-      category: [
-        {
-          _id: '6080c604b992ac2a602efcf0',
-          title: 'Jest'
-        },
-        {
-          _id: '6080c604b992ac2a602efcf1',
-          title: 'Hooks'
-        },
-        {
-          _id: '6080c604b992ac2a602efcf2',
-          title: 'Redux'
-        }
-      ]
-    }
-  ];
-
+  const cards = useData(state => state.cards);
   return (
     <section id="services" className="bg-primary py-7 mt-5">
       <div className="container">
@@ -78,7 +16,7 @@ export const Services: React.FC = () => {
           </h4>
         </div>
         <div className="flex flex-wrap justify-between">
-          {cards.map(({ ...card }) => (
+          {cards.map(({ ...card }: CardI) => (
             <Card {...card} key={card._id} />
           ))}
         </div>

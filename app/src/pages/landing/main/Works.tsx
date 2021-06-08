@@ -1,45 +1,10 @@
-//import { useEffect, useRef, useState } from 'react';
-//import { Image } from './Image';
+import { Image } from './Image';
+import { useWorks } from '../../../hooks/useWorks';
 
 export const Works: React.FC = () => {
-  return <h1>Works!</h1>;
-  /* //data from portfolio store
-  const { works } = useSelector(state => state.portfolio);
-
-  const [work, setWork] = useState(0);
-  const [img, setImg] = useState(0);
-  const { categories, title, desc, images, repo, web } = works[work];
+  const { works, changeImage, handleSubstract, handleAdd, img } = useWorks();
+  const { categories, title, desc, images, repo, web } = works;
   const url = images[img];
-
-  const changeImage = () => {
-    if (img === images.length - 1) {
-      setImg(0);
-      return;
-    }
-    setImg(img + 1);
-  };
-  //subtract array index
-  const handleSubstract = () => {
-    if (work === 0) {
-      return;
-    }
-    setImg(0);
-    setWork(work - 1);
-  };
-  const handleAdd = () => {
-    if (work === works.length - 1) {
-      return;
-    }
-    setImg(0);
-    setWork(work + 1);
-  };
-  const divRef = useRef();
-
-  useEffect(() => {
-    if (divRef.current) {
-      divRef.current.classList.toggle('animate__fadeIn');
-    }
-  }, [work]);
   return (
     <section id="works" className="works__container">
       <h4>Mis trabajos</h4>
@@ -47,25 +12,23 @@ export const Works: React.FC = () => {
       <div className="works__content">
         <div className="works__container-image-left">
           <div className="works__image">
-            <Image url={url} changeImage={changeImage} images={images} />
+            <Image url={url} changeImage={changeImage} />
           </div>
         </div>
         <div className="works__content-right">
           <div className="works__content-header">
-            <h5 className="animate__animated animate__bounce" ref={divRef}>
-              {title}
-            </h5>
+            <h5 className="animate__animated animate__bounce">{title}</h5>
             <p>{desc}</p>
             <div className="works__content-tag">
-              {categories.map(({ title, link, src }, i) =>
+              {categories.map(({ title, link, src, _id }) =>
                 link ? (
-                  <p className="works__tag-item" key={i}>
+                  <p className="works__tag-item" key={_id}>
                     <a target="_blank" rel="noreferrer noopener" href={src}>
                       {title}
                     </a>
                   </p>
                 ) : (
-                  <p className="works__tag-item" key={i}>
+                  <p className="works__tag-item" key={_id}>
                     <span>{title}</span>
                   </p>
                 )
@@ -110,5 +73,5 @@ export const Works: React.FC = () => {
         </div>
       </div>
     </section>
-  ); */
+  );
 };

@@ -1,9 +1,19 @@
+import { useEffect } from 'react';
 import { ImageI } from '../../../interface/api.response';
 
 interface ImageProps {
   url: ImageI;
+  changeImage: () => void;
 }
+export const Image: React.FC<ImageProps> = ({ url, changeImage }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      changeImage();
+    }, 5000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [changeImage]);
 
-export const Image: React.FC<ImageProps> = ({ url }) => (
-  <img src={`./${url.url}`} alt={url.alt} className="animate__animated" />
-);
+  return <img src={`./${url.url}`} alt={url.alt} />;
+};

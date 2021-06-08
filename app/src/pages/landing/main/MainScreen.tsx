@@ -1,9 +1,10 @@
 import { Navbar } from '../ui/Navbar';
 import { Hero } from './Hero';
 import { Services } from './Services';
+import { Works } from './Works';
 /* import { Footer } from '../ui/Footer';
 import { Estimate } from './Estimate';
-import { Works } from './Works'; */
+ */
 
 export const MainScreen = () => {
   return (
@@ -11,6 +12,7 @@ export const MainScreen = () => {
       <Navbar />
       <Hero />
       <Services />
+      <Works />
     </>
   );
 };
