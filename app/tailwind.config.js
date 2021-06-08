@@ -542,6 +542,7 @@ module.exports = {
     }),
     minHeight: {
       0: '0px',
+      medium: '380px',
       full: '100%',
       screen: '100vh'
     },
@@ -793,6 +794,7 @@ module.exports = {
       '9/12': '80%',
       '10/12': '83.333333%',
       '11/12': '91.666667%',
+      custom: '47%',
       full: '100%',
       screen: '100vw',
       min: 'min-content',
