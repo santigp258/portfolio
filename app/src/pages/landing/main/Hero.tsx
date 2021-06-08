@@ -29,18 +29,18 @@ export const Hero: React.FC = () => {
           mejor de mí en cada proyecto.
         </p>
         <button
-          className="btn btn-blue m-auto block w-full my-3 uppercase shadow md:inline-block md:w-3/6 hover:bg-primary hover:shadow-sm"
+          className="btn-blue m-auto block w-full my-3 uppercase shadow md:inline-block md:w-3/6 hover:bg-primary hover:shadow-sm"
           type="button"
         >
-          <a href="#contact" className="font-semibold">
+          <a href="#contact" className="btn font-semibold block">
             Contáctame
           </a>
         </button>
         <button
-          className="btn m-auto block w-full my-3 uppercase md:inline-block md:w-3/6 hover:text-primary"
+          className="m-auto block w-full my-3 uppercase md:inline-block md:w-3/6 hover:text-primary"
           type="button"
         >
-          <a href="#works" className="font-semibold">
+          <a href="#works" className="btn font-semibold block">
             Mis trabajos
           </a>
         </button>

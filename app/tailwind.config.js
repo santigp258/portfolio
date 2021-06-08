@@ -13,6 +13,11 @@ module.exports = {
       '2xl': '1536px'
     },
     colors: {
+      card: {
+        cat: 'var(--category)',
+        DEFAULT: 'var(--cards)'
+      },
+      service_title: 'var(--service_title)',
       primary: 'var(--primary)',
       background: 'var(--background)',
       hoverlinks: 'var(--tomato)',
@@ -20,7 +25,7 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       black: colors.black,
-      white: colors.white,
+      white: 'var(--white)',
       gray: colors.coolGray,
       red: colors.red,
       yellow: colors.amber,

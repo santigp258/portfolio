@@ -5,16 +5,14 @@ import { Menu } from './Menu';
 
 export const Navbar: React.FC = () => {
   const refMenu = useRef<HTMLDivElement>(null);
-  const handleToggle = () => {
-    if (refMenu.current) {
-      refMenu.current.classList.toggle('hidden');
-    }
-  };
+  const handleToggle = () =>
+    refMenu.current && refMenu.current.classList.toggle('hidden');
+
   return (
     <header>
       <nav className="flex items-center justify-between flex-wrap bg-teal-500 py-6 container">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
-          <span className="font-semibold text-xl tracking-tight text-primary cursor-pointer">
+          <span className="font-semibold text-xl tracking-tight text-primary cursor-pointer hover:text-black">
             {'<Santiago />'}
           </span>
         </div>

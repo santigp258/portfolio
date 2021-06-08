@@ -2,13 +2,18 @@ import { CardI } from '../../../interface/api.response';
 
 export const Card: React.FC<CardI> = ({ title, icon, category, desc }) => {
   return (
-    <div className="services__card-item">
-      <i className={`fab ${icon}`}></i>
-      <h4>{title}</h4>
+    <div className="text-white p-5 bg-card mb-5 rounded-md">
+      <i className={`fab ${icon} text-4xl mb-2`}></i>
+      <h4 className="text-3xl font-semibold mb-3">{title}</h4>
       <p>{desc}</p>
-      <div className="services__categories">
+      <div className="flex flex-wrap w-full justify-center mt-3">
         {category.map(({ title, _id }) => (
-          <p key={_id}>{title}</p>
+          <p
+            key={_id}
+            className="capitalize mr-1 mb-1 w-2/5 flex justify-center align-middle bg-card-cat p-2 rounded-sm"
+          >
+            {title}
+          </p>
         ))}
       </div>
     </div>
