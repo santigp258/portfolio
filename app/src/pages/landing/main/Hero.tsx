@@ -29,7 +29,7 @@ export const Hero: React.FC = () => {
           mejor de mí en cada proyecto.
         </p>
         <button
-          className="btn-blue m-auto block w-full my-3 uppercase shadow md:inline-block md:w-3/6 hover:bg-primary hover:shadow-sm"
+          className="btn-red m-auto block w-full my-3 uppercase shadow md:inline-block md:w-3/6 hover:bg-primary hover:shadow-sm"
           type="button"
         >
           <a href="#contact" className="btn font-semibold block">

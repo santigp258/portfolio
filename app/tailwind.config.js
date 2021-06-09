@@ -25,7 +25,7 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       tag: 'var(--tag)',
-      black: colors.black,
+      black: 'var(--black)',
       white: 'var(--white)',
       gray: colors.coolGray,
       red: colors.red,
