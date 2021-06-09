@@ -1,11 +1,10 @@
 import { FormEvent, useState } from 'react';
 import Modal from 'react-modal';
 import { useForm } from '../../../hooks/useForm';
-import validator from 'validator';
-import Swal from 'sweetalert2';
-import { Axios } from '../../../services/api.config';
-import { MailResponse } from '../../../interface/mail.response';
 import { ModalProps } from '../../../interface/modal.interface';
+import { InitialStateFormI } from '../../../interface/contactmodal.interface';
+import { sendEmail } from '../../../services/sendmail.service';
+import { isFormValid } from '../../../helpers/isFormValid';
 
 const customStyles = {
   content: {
@@ -21,7 +20,7 @@ const customStyles = {
   }
 };
 
-const initialState = {
+const initialState: InitialStateFormI = {
   name: '',
   email: '',
   msg: ''
@@ -32,9 +31,6 @@ Modal.setAppElement('#root');
 export const ContactModal: React.FC<ModalProps> = ({ modalIsOpen, closeModal }) => {
   const [loading, setLoading] = useState(false);
 
-  //controll modal width
-  window.innerWidth >= 768 && (customStyles.content.width = '40%');
-
   const {
     values: formValues,
     handleInputChange,
@@ -44,50 +40,17 @@ export const ContactModal: React.FC<ModalProps> = ({ modalIsOpen, closeModal }) 
   const { name, email, msg } = formValues;
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (isFormValid()) {
+    if (isFormValid({ ...formValues })) {
       setLoading(true);
-      try {
-        const resp = await Axios.post<MailResponse>('/mail', formValues);
-        const data = resp.data;
-        Swal.fire('¡Mensaje enviado correctamente!', data.msg, 'success');
-
-        //inital form state
+      setTimeout(() => {
         resetForm();
         //closemodal
         closeModal(false);
         //loader hide
-        setLoading(false);
-      } catch (error) {
-        console.log(error);
-        Swal.fire(
-          'Error',
-          'Ha surgido un error inesperado, intenta rellenar el formulario de nuevo',
-          'error'
-        );
-      }
-    }
-  };
 
-  const isFormValid = () => {
-    if (name.trim().length < 3) {
-      Swal.fire(
-        'Error',
-        'El nombre es requerido y debe tener más de 3 caracteres',
-        'error'
-      );
-      return false;
-    } else if (!validator.isEmail(email)) {
-      Swal.fire('Error', 'No es un email valido', 'error');
-      return false;
-    } else if (msg.trim().length < 10) {
-      Swal.fire(
-        'Error',
-        'El mensaje es requerido y debe tener más de 10 caracteres',
-        'error'
-      );
-      return false;
+        setLoading(false);
+      }, 2000);
     }
-    return true;
   };
 
   return (
@@ -96,71 +59,71 @@ export const ContactModal: React.FC<ModalProps> = ({ modalIsOpen, closeModal }) 
       style={customStyles}
       onRequestClose={() => closeModal(false)}
     >
-      <section className="contact__contact-modal">
-        <h1 className="contact__section-header">CONTACT</h1>
+      <section className="w-full bg-black text-white p-7 text-center">
+        <h1 className="text-4xl font-semibold tracking-widest">CONTACT</h1>
 
-        <div className="contact__contact-wrapper">
-          <form className="contact__contact-form" onSubmit={handleSubmit}>
-            <div className="contact__list">
-              <div className="contact__input-container">
-                <div className="contact__input-content">
+        <div className="h-full">
+          <form onSubmit={handleSubmit}>
+            <div>
+              <div className="mt-9">
+                <div className="relative">
                   <input
                     type="text"
-                    className="contact__form-control"
+                    className="btn btn-form bg-black text-white font-normal w-full border border-white"
                     id="name"
                     name="name"
                     autoComplete="off"
-                    required
                     onChange={handleInputChange}
                     value={name}
                   />
-                  <label htmlFor="">Name</label>
+                  <label htmlFor="name" className="absolute -top-7 left-0">
+                    Name
+                  </label>
                 </div>
               </div>
 
-              <div className="contact__input-container">
-                <div className="contact__input-content">
+              <div className="mt-8">
+                <div className="relative">
                   <input
                     type="email"
-                    className="contact__form-control"
+                    className="btn btn-form bg-black text-white font-normal w-full border border-white"
                     id="email"
                     name="email"
                     autoComplete="off"
-                    required
                     onChange={handleInputChange}
                     value={email}
                   />
-                  <label htmlFor="">Email</label>
+                  <label htmlFor="email" className="absolute -top-7 left-0">
+                    Email
+                  </label>
                 </div>
               </div>
             </div>
 
-            <input
-              className="contact__form-control contact__text-area"
+            <textarea
+              className="btn btn-form bg-black text-white font-normal mt-6 h-2/6 w-full border border-white"
               placeholder="Message"
               name="msg"
               autoComplete="off"
               onChange={handleInputChange}
               value={msg}
-            />
+            ></textarea>
 
-            <div className="contact__container-button">
+            <div className="mt-6">
               <button
-                className="contact__btn portfolio_button contact__send-button"
+                className="btn bg-primary overflow-hidden w-full"
                 id="submit"
                 type="submit"
                 value="Send"
               >
-                <div className="contact__button">
-                  {loading ? (
-                    <i className="fa fa-spinner fa-spin"></i>
-                  ) : (
-                    <>
-                      <i className="fa fa-paper-plane"></i>
-                      <span className="contact__send-text">SEND</span>
-                    </>
-                  )}
-                </div>
+                {loading ? (
+                  <i className="fa fa-spinner fa-spin" />
+                ) : (
+                  <div className="contact__button h-5">
+                    <i className="fa fa-paper-plane" />
+                    <span className="mt-1 block font-normal tracking-wider">SEND</span>
+                  </div>
+                )}
               </button>
             </div>
           </form>

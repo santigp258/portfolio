@@ -4,7 +4,9 @@ export const useForm = <T extends object>(
   initialState: T
 ): {
   values: T;
-  handleInputChange: ({ target }: ChangeEvent<HTMLInputElement>) => void;
+  handleInputChange: ({
+    target
+  }: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => void;
   reset: () => void;
 } => {
   const [values, setValues] = useState<T>(initialState);
@@ -13,7 +15,9 @@ export const useForm = <T extends object>(
     setValues(initialState);
   };
 
-  const handleInputChange = ({ target }: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = ({
+    target
+  }: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
     setValues({
       ...values,
       [target.name]: target.value
