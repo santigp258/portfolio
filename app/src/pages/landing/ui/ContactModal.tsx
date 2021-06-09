@@ -8,7 +8,6 @@ import { isFormValid } from '../../../helpers/isFormValid';
 
 const customStyles = {
   content: {
-    width: '90%',
     top: '50%',
     left: '50%',
     right: 'auto',
@@ -42,14 +41,12 @@ export const ContactModal: React.FC<ModalProps> = ({ modalIsOpen, closeModal }) 
     e.preventDefault();
     if (isFormValid({ ...formValues })) {
       setLoading(true);
-      setTimeout(() => {
-        resetForm();
-        //closemodal
-        closeModal(false);
-        //loader hide
-
-        setLoading(false);
-      }, 2000);
+      await sendEmail(formValues);
+      resetForm();
+      //closemodal
+      closeModal(false);
+      //loader hide
+      setLoading(false);
     }
   };
 
@@ -59,12 +56,12 @@ export const ContactModal: React.FC<ModalProps> = ({ modalIsOpen, closeModal }) 
       style={customStyles}
       onRequestClose={() => closeModal(false)}
     >
-      <section className="w-full bg-black text-white p-7 text-center">
+      <section className="w-80 md:w-custom2 bg-black text-white p-7 text-center">
         <h1 className="text-4xl font-semibold tracking-widest">CONTACT</h1>
 
         <div className="h-full">
           <form onSubmit={handleSubmit}>
-            <div>
+            <div className="grid md:grid-cols-2 md:gap-3">
               <div className="mt-9">
                 <div className="relative">
                   <input
@@ -82,7 +79,7 @@ export const ContactModal: React.FC<ModalProps> = ({ modalIsOpen, closeModal }) 
                 </div>
               </div>
 
-              <div className="mt-8">
+              <div className="mt-8 md:mt-9">
                 <div className="relative">
                   <input
                     type="email"
@@ -101,7 +98,7 @@ export const ContactModal: React.FC<ModalProps> = ({ modalIsOpen, closeModal }) 
             </div>
 
             <textarea
-              className="btn btn-form bg-black text-white font-normal mt-6 h-2/6 w-full border border-white"
+              className="btn btn-form bg-black text-white font-normal mt-6 h-2/6 w-full border border-white resize-none"
               placeholder="Message"
               name="msg"
               autoComplete="off"

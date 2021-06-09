@@ -796,6 +796,7 @@ module.exports = {
       '10/12': '83.333333%',
       '11/12': '91.666667%',
       custom: '47%',
+      custom2: '30rem',
       full: '100%',
       screen: '100vw',
       min: 'min-content',
