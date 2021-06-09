@@ -1,6 +1,7 @@
 export interface LisItemsI {
   title: string;
   href: string;
+  classNames?: string;
 }
 
 export const listItems: LisItemsI[] = [

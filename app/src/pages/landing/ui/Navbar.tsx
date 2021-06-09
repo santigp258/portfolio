@@ -39,7 +39,7 @@ export const Navbar: React.FC = () => {
         >
           <div className="text-base md:flex md:justify-end w-full">
             {listItems.map(item => (
-              <Menu {...item} key={item.href} />
+              <Menu {...item} key={item.href}  classNames="block mt-4 mr-5 md:inline-block md:mt-0 md:mr-8"/>
             ))}
           </div>
         </div>

@@ -6,7 +6,7 @@ export const Services: React.FC = () => {
   const cards = useData(state => state.cards);
   return (
     <section id="services" className="bg-primary py-7 mt-5">
-      <div className="container">
+      <div className="container mt-5">
         <div>
           <h4 className="text-service_title text-3xl md:text-5xl md:mb-2  font-semibold">
             Mis servicios
