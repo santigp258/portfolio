@@ -16,7 +16,8 @@ export const AppRouter: React.FC = () => {
     load();
   }, [load]);
 
-  if (works || cards) return <Loader />;
+  if (!works || !cards) return <Loader />;
+  if (works.length === 0 || works.length === 0) return <Loader />;
   return (
     <Router>
       <main className="font-metropolis">
