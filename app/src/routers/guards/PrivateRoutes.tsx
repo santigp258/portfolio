@@ -6,13 +6,11 @@ export const PrivateRoutes: React.FC<AppRoutesProps> = ({
   isAuthenticated,
   component: Component,
   ...rest
-}) => {
-  return (
-    <Route
-      {...rest}
-      component={(props: AppRoutesProps) =>
-        isAuthenticated ? <Component {...props} /> : <Redirect to="/auth" />
-      }
-    />
-  );
-};
+}) => (
+  <Route
+    {...rest}
+    component={(props: AppRoutesProps) =>
+      isAuthenticated ? <Component {...props} /> : <Redirect to="/auth" />
+    }
+  />
+);

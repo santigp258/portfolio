@@ -17,14 +17,12 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 
-export const MyHistory: React.FC<ModalProps> = ({ modalIsOpen, closeModal }) => {
-  return (
-    <Modal
-      isOpen={modalIsOpen}
-      style={customStyles}
-      onRequestClose={() => closeModal(false)}
-    >
-      <h1>Hello world!</h1>
-    </Modal>
-  );
-};
+export const MyHistory: React.FC<ModalProps> = ({ modalIsOpen, closeModal }) => (
+  <Modal
+    isOpen={modalIsOpen}
+    style={customStyles}
+    onRequestClose={() => closeModal(false)}
+  >
+    <h1>Hello world!</h1>
+  </Modal>
+);
