@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "My portfolio using TypeScript with TailwindCSS",
   "main": "index.js",
+  "engines": {
+    "npm": "7.11.2"
+  },
   "workspaces": [
     "api",
     "app"
