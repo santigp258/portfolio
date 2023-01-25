@@ -1,0 +1,559 @@
+{
+  "cards": [{
+  "_id": {
+    "$oid": "6080c604b992ac2a602efcef"
+  },
+  "title": "React",
+  "desc": "Quise aprender React y un nuevo mundo se abrió camino, es una excelente librería para crear aplicaciones web, de hecho este portafolio está creado con este. También me he adentrado en el uso de hooks y Redux. ",
+  "icon": "fa-react",
+  "category": [
+    {
+      "_id": {
+        "$oid": "6080c604b992ac2a602efcf0"
+      },
+      "title": "Jest"
+    },
+    {
+      "_id": {
+        "$oid": "6080c604b992ac2a602efcf1"
+      },
+      "title": "Hooks"
+    },
+    {
+      "_id": {
+        "$oid": "6080c604b992ac2a602efcf2"
+      },
+      "title": "Redux"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1619052036152"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1619052036152"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6081b8c4b6e900209848653f"
+  },
+  "title": "Angular",
+  "desc": "Mi primer framework frontend, me gustó mucho la forma de trabajar con este, y las herramientas que brinda. He tenido la oportunidad de hacer uso de Angular Material, PrimeNg y otros. Además del uso de servicios, routing, etc.",
+  "icon": "fa-angular",
+  "category": [
+    {
+      "_id": {
+        "$oid": "6081b8c4b6e9002098486540"
+      },
+      "title": "PrimeNG"
+    },
+    {
+      "_id": {
+        "$oid": "6081b8c4b6e9002098486541"
+      },
+      "title": "Angular Material"
+    },
+    {
+      "_id": {
+        "$oid": "6081b8c4b6e9002098486542"
+      },
+      "title": "SPA"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1619114180964"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1619114180964"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6081b8d1b6e9002098486543"
+  },
+  "title": "PHP",
+  "desc": "PHP es mi primer lenguaje Backend, complementado con lo más básico del desarrolo web. En conjunto he colaborado en algunos proyectos con PHP puro, además de conocer un poco su framework Laravel.",
+  "icon": "fa-php",
+  "category": [
+    {
+      "_id": {
+        "$oid": "6081b8d1b6e9002098486544"
+      },
+      "title": "Rest Api"
+    },
+    {
+      "_id": {
+        "$oid": "6081b8d1b6e9002098486545"
+      },
+      "title": "MVC"
+    },
+    {
+      "_id": {
+        "$oid": "6081b8d1b6e9002098486546"
+      },
+      "title": "Backend"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1619114193769"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1619114193769"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6081b8dbb6e9002098486547"
+  },
+  "title": "Node Js",
+  "desc": "He creado algunos servidores Rest con la ayuda del framework Express. Usando JWT para la autentificación, express-validator, mongoose para conectar con MongoDB, etc.",
+  "icon": "fa-node-js",
+  "category": [
+    {
+      "_id": {
+        "$oid": "6081b8dbb6e9002098486548"
+      },
+      "title": "Backend"
+    },
+    {
+      "_id": {
+        "$oid": "6081b8dbb6e9002098486549"
+      },
+      "title": "Rest Api"
+    },
+    {
+      "_id": {
+        "$oid": "6081b8dbb6e900209848654a"
+      },
+      "title": "Express"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1619114203720"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1619114203720"
+    }
+  },
+  "__v": 0
+}],
+"works" : [{
+  "_id": {
+    "$oid": "6081af6ab6e900209848652b"
+  },
+  "title": "Country App",
+  "desc": "Reto de Frontend Mentor, usando la Rest API de países. Construida en Angular, su funcionalidad es la siguiente:  se puede hacer búsquedas generales y filtrar por región, además de ver la información completa del país seleccionado y sus países fronterizos.",
+  "repo": "https://github.com/santigp258/CountryApp",
+  "web": "https://countryapp-dc61c.web.app/",
+  "categories": [
+    {
+      "_id": {
+        "$oid": "6081af6ab6e900209848652c"
+      },
+      "title": "Rest Countries",
+      "link": true,
+      "src": "https://restcountries.eu/"
+    },
+    {
+      "_id": {
+        "$oid": "6081af6ab6e900209848652d"
+      },
+      "title": "Frontend Mentor",
+      "src": "https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca",
+      "link": true
+    },
+    {
+      "_id": {
+        "$oid": "6081af6ab6e900209848652e"
+      },
+      "title": "Angular",
+      "link": false
+    }
+  ],
+  "images": [
+    {
+      "_id": {
+        "$oid": "6081af6ab6e900209848652f"
+      },
+      "url": "./img/country/country_main.png",
+      "alt": "main country image"
+    },
+    {
+      "_id": {
+        "$oid": "6081af6ab6e9002098486530"
+      },
+      "url": "./img/country/country_main_light.png",
+      "alt": "main mode light image"
+    },
+    {
+      "_id": {
+        "$oid": "6081af6ab6e9002098486531"
+      },
+      "url": "./img/country/country_details_light.png",
+      "alt": "details mode light image"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1619111786119"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1619111786119"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6081af8fb6e9002098486532"
+  },
+  "title": "Weather App",
+  "repo": "https://github.com/santigp258/WeatherApp",
+  "web": "https://weatherappsanti.web.app/weather/temp",
+  "desc": "Aplicación creada con Angular, consumiendo dos API’s. Rest countries para buscar países, y una Api del clima para la información climatológica. Además hago uso de Angular Material.",
+  "categories": [
+    {
+      "_id": {
+        "$oid": "6081af8fb6e9002098486533"
+      },
+      "title": "Angular Material",
+      "src": "https://material.angular.io/",
+      "link": true
+    },
+    {
+      "_id": {
+        "$oid": "6081af8fb6e9002098486534"
+      },
+      "title": "Rest Countries",
+      "link": true,
+      "src": "https://restcountries.eu/"
+    },
+    {
+      "_id": {
+        "$oid": "6081af8fb6e9002098486535"
+      },
+      "title": "Weather Bit",
+      "link": true,
+      "src": "https://www.weatherbit.io/"
+    }
+  ],
+  "images": [
+    {
+      "_id": {
+        "$oid": "6081af8fb6e9002098486536"
+      },
+      "url": "./img/weather/weather_main.png",
+      "alt": "wheater main image"
+    },
+    {
+      "_id": {
+        "$oid": "6081af8fb6e9002098486537"
+      },
+      "url": "./img/weather/weather_details.png",
+      "alt": "wheater details image"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1619111823121"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1619111823121"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6081af97b6e9002098486538"
+  },
+  "title": "ERIIA",
+  "repo": "https://github.com/santigp258/ERIIA_",
+  "web": "#eriia",
+  "desc": "Proyecto universitario de una conferencia para un evento llamado ERIIA. Este fue creado en PHP. Se necesitaba mostrar la información del evento, sus ponentes, horarios y un formulario de registro e implemetando JavaScript para las validaciones desde el cliente.",
+  "categories": [
+    {
+      "_id": {
+        "$oid": "6081af97b6e9002098486539"
+      },
+      "title": "PHP",
+      "link": false
+    },
+    {
+      "_id": {
+        "$oid": "6081af97b6e900209848653a"
+      },
+      "title": "MySQL",
+      "link": false
+    },
+    {
+      "_id": {
+        "$oid": "6081af97b6e900209848653b"
+      },
+      "title": "JavaScript",
+      "link": false
+    }
+  ],
+  "images": [
+    {
+      "_id": {
+        "$oid": "6081af97b6e900209848653c"
+      },
+      "url": "./img/country/country_main.png",
+      "alt": "main country image"
+    },
+    {
+      "_id": {
+        "$oid": "6081af97b6e900209848653d"
+      },
+      "url": "./img/country/country_main_light.png",
+      "alt": "main mode light image"
+    },
+    {
+      "_id": {
+        "$oid": "6081af97b6e900209848653e"
+      },
+      "url": "./img/country/country_details_light.png",
+      "alt": "details mode light image"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1619111831579"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1619111831579"
+    }
+  },
+  "__v": 0
+}],
+"emails": [{
+  "_id": {
+    "$oid": "60823978d443820021a7f27f"
+  },
+  "name": "Itchel bebé ",
+  "email": "annamustaine@outlook.es",
+  "msg": "Perdóname bebé chiquito, no quiero que estés serio conmigo UnU Te amo mucho 🥺 ",
+  "email_id": "<230ac86c-a198-d48d-813c-a0e575783a42@gmail.com>",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1619147128385"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1619147128385"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6083409a60a67300214055b0"
+  },
+  "name": "Daniel villada",
+  "email": "santiagoguerreropulgarin@gmail.com",
+  "msg": "Hola, clark",
+  "email_id": "<5863da33-db65-4890-0221-0720b2d7f128@gmail.com>",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1619214490609"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1619214490609"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60844718214b0d0021e056e5"
+  },
+  "name": "Amilkar Muñoz",
+  "email": "amilkarms@outlook.com",
+  "msg": "Ya te envié el archivo .env!! ",
+  "email_id": "<2baea170-b7a6-cda3-f64e-e56235453a97@gmail.com>",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1619281688674"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1619281688674"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6085947329ac711b64628916"
+  },
+  "name": "santiago uwu",
+  "email": "santiagoguerreropulgarin@gmail.com",
+  "msg": "Hi, brou, qué tal?\n",
+  "email_id": "<fa5cd7de-1704-c322-8982-e40b33e2d968@gmail.com>",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1619367027670"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1619367027670"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a71dcec81b1b0021ed13c0"
+  },
+  "name": "Santisgo",
+  "email": "santigp258@gmail.com",
+  "msg": "Hi, man. Cómo estás?",
+  "email_id": "<7cd80aae-edcf-0cb1-23bc-14db8afc4d59@gmail.com>",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1621564878790"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1621564878790"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60bd46a4ed6c16311c59cbdd"
+  },
+  "email": "santiagoguerreropulgarin@gmail.com",
+  "msg": "hola, qué tal?",
+  "name": "santi",
+  "email_id": "<3fb8d234-4a61-7add-aee4-6c9bf6d9802f@gmail.com>",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1623017124671"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1623017124671"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c0ee50ace815398c38eaf3"
+  },
+  "name": "santiago",
+  "email": "santigp258@gmail.com",
+  "msg": "32sjsjssskksksks",
+  "email_id": "<300b3751-826c-fc42-ac24-07d4dcf33ec1@gmail.com>",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1623256656691"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1623256656691"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c0f712ace815398c38eaf4"
+  },
+  "name": "Santi",
+  "email": "santigp258@outlook.com",
+  "msg": "Santiago Guerrero\n",
+  "email_id": "<c1b9795d-404d-d3b1-2343-c381157ebc63@gmail.com>",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1623258898652"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1623258898652"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c0f716ace815398c38eaf5"
+  },
+  "name": "Santi",
+  "email": "santigp258@outlook.com",
+  "msg": "Santiago Guerrero\n",
+  "email_id": "<a707e1bd-3279-55bb-ca81-a2f07d65db2f@gmail.com>",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1623258902080"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1623258902080"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c0f754ace815398c38eaf6"
+  },
+  "name": "Santiago",
+  "email": "santigp258@gmail.com",
+  "msg": "321882jdjd",
+  "email_id": "<a8caac3f-1b12-4a86-27ce-cf27bf3623b3@gmail.com>",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1623258964090"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1623258964090"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c0fd27ace815398c38eaf7"
+  },
+  "name": "Santiago",
+  "email": "santigp258@gmail.com",
+  "msg": "Hola, qué tal?",
+  "email_id": "<be21a2d1-d6d2-7284-da42-616142781041@gmail.com>",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1623260455123"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1623260455123"
+    }
+  },
+  "__v": 0
+}]
+}
